@@ -3,7 +3,8 @@ import json
 
 synoUrl = 'http://x.x.me:5000'
 username = 'xxx'
-passwd = 'xxxx'
+passwd = 'xxx'
+temp = 30
 
 
 def auth():
@@ -71,7 +72,7 @@ try:
         key = f.readlines()
         sid = key[0]
         sys_temp_storage = sys_temp_storage(sid)
-        if sys_temp_storage > 30:
+        if sys_temp_storage > temp:
             fullfan(sid)
         else:
             coolfan(sid)
